@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>AFA Media | The Future of Lead Gen</title>
+    
+    <!-- Optimized Favicon & App Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-32,h-32,cm-pad_resize,bg-00000000" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-16,h-16,cm-pad_resize,bg-00000000" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-180,h-180,cm-pad_resize,bg-00000000" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Smoothscroll Polyfill CDN -->
+    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script>
+      // Force the polyfill and initialize it
+      window.__forceSmoothScrollPolyfill__ = true;
+      smoothscroll.polyfill();
+    </script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              neon: {
+                blue: '#00f3ff',
+                purple: '#bc13fe',
+                dark: '#050510'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            animation: {
+              'glow-pulse': 'glow 3s ease-in-out infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'noise': 'noise 0.2s infinite',
+            },
+            keyframes: {
+              glow: {
+                '0%, 100%': { opacity: 0.8, boxShadow: '0 0 10px #00f3ff' },
+                '50%': { opacity: 0.4, boxShadow: '0 0 20px #00f3ff' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              noise: {
+                '0%': { transform: 'translate(0,0)' },
+                '50%': { transform: 'translate(-10%,5%)' },
+                '100%': { transform: 'translate(5%,0)' }
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050510;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00f3ff;
+      }
+      @media (pointer: fine) {
+        body, a, button, input, select, textarea, [role="button"] {
+          cursor: none !important;
+        }
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+        "vite": "https://aistudiocdn.com/vite@^7.2.6",
+        "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "30min", {origin:"https://app.cal.com"});
+      Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+  </body>
+</html>
