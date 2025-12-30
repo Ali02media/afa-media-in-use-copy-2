@@ -3,21 +3,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#000000" />
     <title>AFA Media | The Future of Lead Gen</title>
     
-    <!-- Optimized Favicon & App Icons -->
+    <!-- Standardized Brand Icons for Desktop & Mobile -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-32,h-32,cm-pad_resize,bg-00000000" />
     <link rel="icon" type="image/png" sizes="16x16" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-16,h-16,cm-pad_resize,bg-00000000" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-180,h-180,cm-pad_resize,bg-00000000" />
     <link rel="manifest" href="/manifest.json" />
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Smoothscroll Polyfill CDN -->
     <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script>
-      // Force the polyfill and initialize it
       window.__forceSmoothScrollPolyfill__ = true;
       smoothscroll.polyfill();
     </script>
@@ -72,6 +70,12 @@
         background-color: #000;
         color: #fff;
         overflow-x: hidden;
+        width: 100%;
+        position: relative;
+      }
+      #root {
+        overflow-x: hidden;
+        width: 100%;
       }
       ::-webkit-scrollbar {
         width: 8px;
