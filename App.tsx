@@ -72,7 +72,7 @@ const App: React.FC = () => {
   `;
 
   return (
-    <div className="relative min-h-screen text-white font-sans selection:bg-neon-blue selection:text-black bg-black overflow-x-hidden">
+    <div className="relative min-h-screen text-white font-sans selection:bg-neon-blue selection:text-black bg-black overflow-x-hidden w-full flex flex-col items-center">
       <CustomCursor />
       <ParticlesBackground />
       
@@ -108,7 +108,8 @@ const App: React.FC = () => {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative min-h-[100dvh] flex flex-col justify-center items-center text-center px-6 pt-24 md:pt-20">
+      <header className="relative min-h-[100dvh] flex flex-col justify-center items-center text-center px-6 pt-24 md:pt-20 w-full overflow-hidden">
+        {/* Anti-shift centered glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[300px] md:h-[400px] bg-neon-blue/10 blur-[120px] rounded-full pointer-events-none z-0 opacity-80" />
 
         <div className="max-w-5xl mx-auto z-10 w-full">
@@ -127,10 +128,10 @@ const App: React.FC = () => {
 
           <ScrollReveal delay={400}>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center w-full max-w-xs sm:max-w-none mx-auto">
-              <button onClick={() => handleNavClick('contact')} className="w-full sm:w-auto px-8 md:px-10 py-4 bg-transparent border border-[#00f3ff] text-[#00f3ff] font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#00f3ff]/10 transition-all shadow-[0_0_20px_rgba(0,243,255,0.2)] flex items-center justify-center gap-3 group outline-none">
-                GET FREE AI STRATEGY <ChevronDown className="-rotate-90 group-hover:translate-x-1 transition-transform" size={14} />
+              <button onClick={() => handleNavClick('contact')} className="w-full sm:w-auto px-8 md:px-10 py-5 bg-transparent border border-[#00f3ff] text-[#00f3ff] font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#00f3ff]/10 transition-all shadow-[0_0_20px_rgba(0,243,255,0.2)] inline-flex items-center justify-center gap-3 group outline-none">
+                BOOK DISCOVERY CALL <ChevronDown className="-rotate-90 group-hover:translate-x-1 transition-transform" size={14} />
               </button>
-              <button onClick={() => handleNavClick('services')} className="w-full sm:w-auto px-8 md:px-10 py-4 bg-transparent border border-gray-800 text-gray-400 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] hover:border-gray-500 hover:text-white transition-all outline-none">
+              <button onClick={() => handleNavClick('services')} className="w-full sm:w-auto px-8 md:px-10 py-5 bg-transparent border border-gray-800 text-gray-400 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] hover:border-gray-500 hover:text-white transition-all inline-flex items-center justify-center gap-2 outline-none">
                 Explore Systems
               </button>
             </div>
@@ -139,10 +140,10 @@ const App: React.FC = () => {
       </header>
 
       {/* Problem Section */}
-      <section id="problem" className="py-24 md:py-32 relative scroll-mt-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="problem" className="py-24 md:py-32 relative scroll-mt-24 w-full overflow-hidden flex flex-col items-center">
+        <div className="max-w-7xl mx-auto px-6 w-full">
           <ScrollReveal>
-            <div className="mb-16 md:mb-20">
+            <div className="mb-16 md:mb-20 text-center md:text-left">
               <h2 className="text-[10px] font-mono text-neon-blue mb-4 uppercase tracking-[0.4em] font-bold">System Failure</h2>
               <h3 className="text-3xl md:text-5xl font-bold">Why The Old Way Is Broken</h3>
             </div>
@@ -163,9 +164,9 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Upgrade Protocol */}
-      <section id="upgrade" className="py-24 md:py-32 relative scroll-mt-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* Upgrade Protocol Section */}
+      <section id="upgrade" className="py-24 md:py-32 relative scroll-mt-24 w-full overflow-hidden flex flex-col items-center">
+        <div className="max-w-7xl mx-auto px-6 w-full">
           <ScrollReveal>
             <div className="text-center mb-16 md:mb-20">
               <h2 className="text-[10px] font-mono text-neon-blue mb-4 uppercase tracking-[0.4em] font-bold">System Architecture</h2>
@@ -190,8 +191,8 @@ const App: React.FC = () => {
       </section>
 
       {/* Process Roadmap */}
-      <section id="process" className="py-24 md:py-32 overflow-hidden scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="process" className="py-24 md:py-32 overflow-hidden scroll-mt-24 w-full flex flex-col items-center">
+        <div className="max-w-7xl mx-auto px-6 w-full">
           <ScrollReveal>
             <div className="text-center mb-16 md:mb-20">
               <h3 className="text-3xl md:text-4xl font-bold uppercase tracking-tight">Execution Roadmap</h3>
@@ -202,8 +203,8 @@ const App: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 md:py-32 relative scroll-mt-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="services" className="py-24 md:py-32 relative scroll-mt-24 w-full overflow-hidden flex flex-col items-center">
+        <div className="max-w-7xl mx-auto px-6 w-full">
           <ScrollReveal>
             <div className="text-center mb-16 md:mb-20">
               <h2 className="text-[10px] font-mono text-neon-purple mb-4 uppercase tracking-[0.4em] font-bold">Operational Modules</h2>
@@ -275,8 +276,8 @@ const App: React.FC = () => {
       </section>
 
       {/* Client Logs */}
-      <section className="py-24 md:py-32 relative scroll-mt-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 md:py-32 relative scroll-mt-24 w-full overflow-hidden flex flex-col items-center">
+        <div className="max-w-7xl mx-auto px-6 w-full">
           <ScrollReveal>
             <div className="text-center mb-16 md:mb-20">
               <h2 className="text-[10px] font-mono text-neon-blue mb-4 uppercase tracking-[0.4em] font-bold">System Validation</h2>
@@ -304,8 +305,8 @@ const App: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 md:py-32 relative border-t border-white/5 scroll-mt-24 overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section id="contact" className="py-24 md:py-32 relative border-t border-white/5 scroll-mt-24 w-full overflow-hidden flex flex-col items-center">
+        <div className="max-w-4xl mx-auto px-6 text-center w-full">
           <ScrollReveal>
             <h2 className="text-4xl md:text-7xl font-bold mb-8 md:mb-10 tracking-tight uppercase px-2">
               Ready To <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f3ff] to-[#bc13fe]">Evolve?</span>
@@ -315,7 +316,7 @@ const App: React.FC = () => {
             <p className="text-gray-500 mb-12 md:mb-16 text-base md:text-lg max-w-2xl mx-auto px-4">Join the agency that uses actual intelligence to grow your business. Limited spots available for this quarter.</p>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <form className="max-w-xl mx-auto space-y-6 md:space-y-8 text-left" onSubmit={handleSubmit} noValidate>
+            <form className="max-w-xl mx-auto space-y-6 md:space-y-8 text-left w-full" onSubmit={handleSubmit} noValidate>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label className="block text-[10px] font-mono text-gray-600 mb-3 uppercase tracking-[0.3em]">Identification</label>
@@ -340,7 +341,7 @@ const App: React.FC = () => {
               </div>
               <button 
                 type="submit"
-                className="w-full py-5 border border-neon-blue text-neon-blue font-mono text-[11px] md:text-xs font-bold uppercase tracking-[0.3em] hover:bg-neon-blue/10 transition-all flex items-center justify-center gap-3 group disabled:opacity-50 shadow-[0_0_15px_rgba(0,243,255,0.1)] hover:shadow-[0_0_30px_rgba(0,243,255,0.3)] outline-none" 
+                className="w-full py-5 border border-neon-blue text-neon-blue font-mono text-[11px] md:text-xs font-bold uppercase tracking-[0.3em] hover:bg-neon-blue/10 transition-all inline-flex items-center justify-center gap-3 group disabled:opacity-50 shadow-[0_0_15px_rgba(0,243,255,0.1)] hover:shadow-[0_0_30px_rgba(0,243,255,0.3)] outline-none" 
                 disabled={formStatus === 'submitting'}
               >
                 {formStatus === 'submitting' ? <LoadingSpinner /> : (
@@ -356,10 +357,10 @@ const App: React.FC = () => {
       </section>
 
       {/* Mini Footer */}
-      <footer className="py-16 md:py-20 border-t border-white/5 bg-black/95 relative overflow-hidden">
+      <footer className="py-16 md:py-20 border-t border-white/5 bg-black/95 relative overflow-hidden w-full flex flex-col items-center">
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-neon-blue/5 blur-[100px] pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-start mb-16">
             
             <div className="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
@@ -412,7 +413,7 @@ const App: React.FC = () => {
           <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 text-center md:text-left">
             <div className="text-gray-700 text-[9px] font-mono uppercase tracking-[0.4em]">© {new Date().getFullYear()} AFA MEDIA. ALL RIGHTS RESERVED.</div>
             <div className="flex items-center gap-6">
-              <span className="text-gray-800 text-[9px] font-mono uppercase tracking-widest">System Ver: 4.2.1_STABLE</span>
+              <span className="text-gray-800 text-[9px] font-mono uppercase tracking-widest">System Ver: 4.2.2_STABLE</span>
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_#22c55e]" />
             </div>
           </div>
