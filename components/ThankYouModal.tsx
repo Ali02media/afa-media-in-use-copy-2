@@ -43,13 +43,13 @@ const ThankYouModal: React.FC<ThankYouModalProps> = ({ isOpen, onClose }) => {
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 tracking-wide">PHASE 1 COMPLETE</h2>
           <div className="flex items-center justify-center gap-2 text-neon-blue/80 font-mono text-xs uppercase tracking-widest mb-6">
               <Calendar size={12} className="animate-pulse" />
-              <span>Initiating Phase 2</span>
+              <span>Initiating Discovery Sync</span>
           </div>
 
           <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-8">
             Intelligence received and encrypted. 
             <br /><br />
-            To finalize the protocol, you must <span className="text-neon-blue font-bold">synchronize a time slot</span> for your secure strategy briefing.
+            To finalize the protocol, you must <span className="text-neon-blue font-bold">synchronize a time slot</span> for your secure discovery call briefing.
           </p>
 
           <Button 
@@ -58,7 +58,7 @@ const ThankYouModal: React.FC<ThankYouModalProps> = ({ isOpen, onClose }) => {
             data-cal-namespace="30min"
             data-cal-config='{"layout":"month_view"}'
           >
-            Secure Time Slot
+            Secure Discovery Call
           </Button>
 
           <button onClick={onClose} className="mt-6 text-xs text-gray-500 hover:text-white font-mono uppercase tracking-wider">

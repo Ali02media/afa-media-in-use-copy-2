@@ -116,7 +116,12 @@ const App: React.FC = () => {
           <ScrollReveal>
             <h1 className="text-4xl md:text-[5.5rem] font-bold tracking-tight mb-8 leading-[1.1] uppercase">
               SCALE WITH<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f3ff] to-[#bc13fe] drop-shadow-[0_0_15px_rgba(0,243,255,0.4)]">INTELLIGENCE</span>
+              <span 
+                className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f3ff] to-[#bc13fe] drop-shadow-[0_0_15px_rgba(0,243,255,0.4)]"
+                style={{ WebkitBackgroundClip: 'text' }}
+              >
+                INTELLIGENCE
+              </span>
             </h1>
           </ScrollReveal>
           
@@ -346,7 +351,7 @@ const App: React.FC = () => {
               >
                 {formStatus === 'submitting' ? <LoadingSpinner /> : (
                     <span className="flex items-center gap-3">
-                        INITIATE STRATEGY PROTOCOL 
+                        BOOK DISCOVERY CALL 
                         <ChevronDown className="-rotate-90 group-hover:translate-x-1 transition-transform" size={14} />
                     </span>
                 )}
@@ -413,7 +418,7 @@ const App: React.FC = () => {
           <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 text-center md:text-left">
             <div className="text-gray-700 text-[9px] font-mono uppercase tracking-[0.4em]">© {new Date().getFullYear()} AFA MEDIA. ALL RIGHTS RESERVED.</div>
             <div className="flex items-center gap-6">
-              <span className="text-gray-800 text-[9px] font-mono uppercase tracking-widest">System Ver: 4.2.2_STABLE</span>
+              <span className="text-gray-800 text-[9px] font-mono uppercase tracking-widest">System Ver: 4.2.3_STABLE</span>
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_#22c55e]" />
             </div>
           </div>

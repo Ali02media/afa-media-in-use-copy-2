@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-32,h-32,cm-pad_resize,bg-00000000" />
     <link rel="icon" type="image/png" sizes="16x16" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-16,h-16,cm-pad_resize,bg-00000000" />
     
-    <!-- High-Resolution Icons for Android (The "Big One") -->
+    <!-- High-Resolution Icons for Android -->
     <link rel="icon" type="image/png" sizes="192x192" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-192,h-192,cm-pad_resize,bg-00000000" />
     <link rel="icon" type="image/png" sizes="512x512" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-512,h-512,cm-pad_resize,bg-00000000" />
     <link rel="shortcut icon" href="https://ik.imagekit.io/hxkb52bem/afa%20media%20logo%20no%20BG.png?tr=w-192,h-192,cm-pad_resize,bg-00000000" />
@@ -126,10 +126,30 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+    
+    <!-- Cal.com Embed -->
     <script type="text/javascript">
       (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
       Cal("init", "30min", {origin:"https://app.cal.com"});
       Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+    
+    <!-- Voiceflow Chatbot Widget -->
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '6910925e6076dd72b3b0c250' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: 'production',
+              voice: {
+                url: "https://runtime-api.voiceflow.com"
+              }
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
     </script>
   </body>
 </html>
