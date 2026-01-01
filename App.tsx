@@ -20,7 +20,7 @@ const App: React.FC = () => {
   const [showBookingSuccess, setShowBookingSuccess] = useState(false);
 
   // Form State
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', url: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', url: '', service: '', message: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
 
@@ -49,8 +49,12 @@ const App: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email) {
-      setFormErrors({ name: !formData.name ? 'Required' : '', email: !formData.email ? 'Required' : '' });
+    if (!formData.name || !formData.email || !formData.service) {
+      setFormErrors({ 
+        name: !formData.name ? 'Required' : '', 
+        email: !formData.email ? 'Required' : '',
+        service: !formData.service ? 'Required' : ''
+      });
       return;
     }
     setFormStatus('submitting');
@@ -60,7 +64,7 @@ const App: React.FC = () => {
       await fetch(GOOGLE_SHEETS_WEBHOOK_URL, { method: 'POST', mode: 'no-cors', body: data });
       setFormStatus('success');
       setShowThankYou(true);
-      setFormData({ name: '', email: '', phone: '', url: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', url: '', service: '', message: '' });
     } catch (error) {
       setFormStatus('error');
     }
@@ -341,6 +345,20 @@ const App: React.FC = () => {
                 <input type="text" name="url" placeholder="Current Website (e.g. https://yoursite.com)" value={formData.url} onChange={(e) => setFormData({...formData, url: e.target.value})} className={getInputClass('url')} />
               </div>
               <div>
+                <label className="block text-[10px] font-mono text-gray-600 mb-3 uppercase tracking-[0.3em]">Operational Module (Service)</label>
+                <select 
+                  name="service" 
+                  value={formData.service} 
+                  onChange={(e) => setFormData({...formData, service: e.target.value})} 
+                  className={getInputClass('service')}
+                >
+                  <option value="" disabled className="bg-black">Select Service Protocol</option>
+                  <option value="AI SmartSite + Meta Ads" className="bg-black">AI SmartSite + Meta Ads</option>
+                  <option value="Neural Sales Funnels" className="bg-black">Neural Sales Funnels</option>
+                  <option value="Full Multi-Page Upgrade" className="bg-black">Full Multi-Page Upgrade</option>
+                </select>
+              </div>
+              <div>
                 <label className="block text-[10px] font-mono text-gray-600 mb-3 uppercase tracking-[0.3em]">Mission Brief (Message)</label>
                 <textarea name="message" placeholder="Briefly describe your objectives (Optional)" value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} className={`${getInputClass('message')} h-32 resize-none`} />
               </div>
@@ -418,7 +436,7 @@ const App: React.FC = () => {
           <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 text-center md:text-left">
             <div className="text-gray-700 text-[9px] font-mono uppercase tracking-[0.4em]">© {new Date().getFullYear()} AFA MEDIA. ALL RIGHTS RESERVED.</div>
             <div className="flex items-center gap-6">
-              <span className="text-gray-800 text-[9px] font-mono uppercase tracking-widest">System Ver: 4.2.3_STABLE</span>
+              <span className="text-gray-800 text-[9px] font-mono uppercase tracking-widest">System Ver: 4.2.4_STABLE</span>
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_#22c55e]" />
             </div>
           </div>
