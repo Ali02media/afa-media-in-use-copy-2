@@ -1,3 +1,4 @@
+
 import { Brain, Zap, Layout, Mail, Globe, Target, Bot } from 'lucide-react';
 import { ServicePackage, FeatureItem, TestimonialItem } from './types';
 
@@ -5,9 +6,9 @@ export const APP_NAME = "AFA MEDIA";
 
 /**
  * GOOGLE SHEETS INTEGRATION
- * Deployment ID: AKfycbzlhQqo5iQVIlEUH7UmE4SbMLZbpdsDkazJPmVvReyZ1XEYo96uORezuRBKz69Vf5-_vg
+ * Updated Web App URL provided by user
  */
-export const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzlhQqo5iQVIlEUH7UmE4SbMLZbpdsDkazJPmVvReyZ1XEYo96uORezuRBKz69Vf5-_vg/exec";
+export const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbx25Mljxmvm41jw0XDQneqLcCNZBKr8doLmjPk3kwhw2W81e1OpGyt4EZZjHUIXQfDfsw/exec";
 
 
 export const SERVICES: ServicePackage[] = [
